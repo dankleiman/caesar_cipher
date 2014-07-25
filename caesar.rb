@@ -16,11 +16,7 @@ def caesar(string, shift)
       code_word << letter
     else
       new_index = alphabet.index(letter) + shift
-      if new_index > 25
-        code_word << alphabet[new_index % 26]
-      else
-        code_word << alphabet[new_index]
-      end
+      code_word << alphabet[new_index % 26]
     end
   end
   code_word.join
